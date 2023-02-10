@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.912ae1f8.css",
-    "main.js": "/static/js/main.f1c93b5a.js",
-    "static/js/787.d6fe38e8.chunk.js": "/static/js/787.d6fe38e8.chunk.js",
-    "static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.jpg": "/static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.ef4df2640b82a67edd4e.jpg",
-    "static/media/waifuMousePad.jpeg": "/static/media/waifuMousePad.b82a8a586071b9b9afa1.jpeg",
-    "static/media/waifuTshirt.jpg": "/static/media/waifuTshirt.dc41eaede282f5ffdc2d.jpg",
-    "static/media/devilWaifu.webp": "/static/media/devilWaifu.1eadcaa1b51481594ffa.webp",
-    "static/media/remCosplay.jpg": "/static/media/remCosplay.1c483d5ca66edfcdaf40.jpg",
-    "static/media/sendNoods.jpg": "/static/media/sendNoods.50001610f3c0eb761a6e.jpg",
-    "static/media/remBodyPillow.avif": "/static/media/remBodyPillow.9a0a1b06de6c75a29821.avif",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88.svg",
-    "index.html": "/index.html",
-    "main.912ae1f8.css.map": "/static/css/main.912ae1f8.css.map",
-    "main.f1c93b5a.js.map": "/static/js/main.f1c93b5a.js.map",
-    "787.d6fe38e8.chunk.js.map": "/static/js/787.d6fe38e8.chunk.js.map"
+    "main.css": "/shopping-cart/static/css/main.f62ea86a.css",
+    "main.js": "/shopping-cart/static/js/main.6beba94d.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.jpg": "/shopping-cart/static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.ef4df2640b82a67edd4e.jpg",
+    "static/media/waifuMousePad.jpeg": "/shopping-cart/static/media/waifuMousePad.b82a8a586071b9b9afa1.jpeg",
+    "static/media/waifuTshirt.jpg": "/shopping-cart/static/media/waifuTshirt.dc41eaede282f5ffdc2d.jpg",
+    "static/media/devilWaifu.webp": "/shopping-cart/static/media/devilWaifu.1eadcaa1b51481594ffa.webp",
+    "static/media/remCosplay.jpg": "/shopping-cart/static/media/remCosplay.1c483d5ca66edfcdaf40.jpg",
+    "static/media/sendNoods.jpg": "/shopping-cart/static/media/sendNoods.50001610f3c0eb761a6e.jpg",
+    "static/media/remBodyPillow.avif": "/shopping-cart/static/media/remBodyPillow.9a0a1b06de6c75a29821.avif",
+    "static/media/logo.svg": "/shopping-cart/static/media/logo.6ce24c58023cc2f8fd88.svg",
+    "index.html": "/shopping-cart/index.html",
+    "main.f62ea86a.css.map": "/shopping-cart/static/css/main.f62ea86a.css.map",
+    "main.6beba94d.js.map": "/shopping-cart/static/js/main.6beba94d.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.912ae1f8.css",
-    "static/js/main.f1c93b5a.js"
+    "static/css/main.f62ea86a.css",
+    "static/js/main.6beba94d.js"
   ]
 }
