@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.f62ea86a.css",
+    "main.css": "/shopping-cart/static/css/main.bff85166.css",
     "main.js": "/shopping-cart/static/js/main.ac99d617.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.jpg": "/shopping-cart/static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.ef4df2640b82a67edd4e.jpg",
@@ -12,12 +12,12 @@
     "static/media/remBodyPillow.avif": "/shopping-cart/static/media/remBodyPillow.9a0a1b06de6c75a29821.avif",
     "static/media/logo.svg": "/shopping-cart/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/shopping-cart/index.html",
-    "main.f62ea86a.css.map": "/shopping-cart/static/css/main.f62ea86a.css.map",
+    "main.bff85166.css.map": "/shopping-cart/static/css/main.bff85166.css.map",
     "main.ac99d617.js.map": "/shopping-cart/static/js/main.ac99d617.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f62ea86a.css",
+    "static/css/main.bff85166.css",
     "static/js/main.ac99d617.js"
   ]
 }
