@@ -68,8 +68,13 @@ export default function RouteSwitch(){
     return(
         <li key={uniqid()}>
 
-            <p>{prod.name}</p>
-            <p>{"$"+prod.price}</p>
+            <img src={require(`${prod.imageUrl}`)} alt="item" />
+
+            <div className="description">
+              <p>{prod.name}</p>
+              <p>{"$" + prod.price}</p>
+              <button onClick={()=>{deleteItem(prod)}}>DELETE</button>
+            </div>
         
             <div className="quantity">
                 <button onClick={()=>{plusOne(prod)}}>+</button>
@@ -77,7 +82,6 @@ export default function RouteSwitch(){
                 <button onClick={()=>{minusOne(prod)}} >-</button>
             </div>
 
-            <button onClick={()=>{deleteItem(prod)}}>DELETE</button>
 
         </li>
     )
