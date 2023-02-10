@@ -91,7 +91,7 @@ export default function RouteSwitch(){
     <BrowserRouter>
       <Nav/>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/shopping-cart" element={<App />} />
         <Route path="/Products" element={<Products allProducts={allProducts}/>} />
         <Route path="/Shop" element={<Shop cartProducts={cartProducts} bill={bill}/>} />
       </Routes>

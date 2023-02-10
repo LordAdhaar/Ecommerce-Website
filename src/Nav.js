@@ -3,11 +3,11 @@ import {Link} from "react-router-dom";
 export default function Nav(){
     return(
         <nav className="Nav">
-            <Link to="/">
+            <Link to="/shopping-cart">
                 <h1>AnimeShop</h1>
             </Link>
             <ul className="navUl">
-                <Link to="/">
+                <Link to="/shopping-cart">
                     <li>
                         Home
                     </li>
