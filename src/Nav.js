@@ -3,7 +3,9 @@ import {Link} from "react-router-dom";
 export default function Nav(){
     return(
         <nav className="Nav">
-            <h1>NAV</h1>
+            <Link to="/">
+                <h1>AnimeShop</h1>
+            </Link>
             <ul className="navUl">
                 <Link to="/">
                     <li>
@@ -17,7 +19,7 @@ export default function Nav(){
                 </Link>
                 <Link to="/Shop">
                     <li>
-                        Shop
+                        Cart
                     </li>
                 </Link>
             </ul>

@@ -8,13 +8,10 @@ import uniqid from "uniqid";
 
 export default function RouteSwitch(){
 
-  const [productArr, setProductArr] = useState([{name:"Gut's Sword", price:200, quantity:1,id:0},{name:"Gintama Underwear",price:2,quantity:1,id:1},{name:"One Punch Suit",price:200,quantity:1,id:2},{name:"Haikyu Wig",price:20,quantity:1,id:3},{name:"Berserker Armor",price:2000,quantity:1,id:4},{name:"Rem's Skirt",price:150,quantity:1,id:5}]);
+  const [productArr, setProductArr] = useState([{name:"Rem Boy Pillow", price:200,id:"zero",imageUrl:"./assets/remBodyPillow.avif"},{name:"Rem Cosplay",price:2,id:"one",imageUrl:"./assets/remCosplay.jpg"},{name:"Waifu MousePad",price:200,id:"two",imageUrl:"./assets/waifuMousePad.jpeg"},{name:"DevilWaifu Sticket",price:20,id:"three",imageUrl:"./assets/devilWaifu.webp"},{name:"Send Noods Poster",price:2000,id:"four",imageUrl:"./assets/sendNoods.jpg"},{name:"Waifu T-Shirt",price:150,id:"five",imageUrl:"./assets/waifuTshirt.jpg"}]);
   const [cartArr, setCartArr] = useState([])
   const [bill,setBill] = useState(0);
 
-  useEffect(()=>{
-    
-  },[bill])
   
   function addToCart(product){
 
@@ -24,26 +21,42 @@ export default function RouteSwitch(){
       }
     }
 
-    setCartArr([...cartArr,product]);
-    setBill(bill+product.price);
+    let cloneProduct = {...product}
+    cloneProduct.quantity=1
+    setCartArr([...cartArr,cloneProduct]);
+
+    console.log(cartArr);
+    console.log(productArr)
+    
+    setBill(bill+cloneProduct.price);
   }
 
   function plusOne(product){
+    product.quantity+=1;
     setBill(bill+product.price)
+    console.log(cartArr);
+    console.log(productArr)
   }
 
   function minusOne(product){
-
-    if((bill - product.price)<0){
-      return;
+    product.quantity-=1;
+    if(product.quantity===0){
+      setCartArr(cartArr.filter(item => item.id !== product.id))
     }
-
     setBill(bill-product.price)
+  }
+
+  function deleteItem(product){
+    
+    setCartArr(cartArr.filter(item => item.id!==product.id));
+    setBill(bill - product.price*product.quantity)
+    
   }
 
   const allProducts = productArr.map(prod=>{
     return(
-        <li key={uniqid()}>
+        <li key={uniqid()} id ={prod.id}>
+            <img src={require(`${prod.imageUrl}`)} alt="waifu" />
             <p>{prod.name}</p>
             <p>{"$"+prod.price}</p>
             <button onClick={()=>{addToCart(prod)}}>ADD TO CART</button>
@@ -54,13 +67,18 @@ export default function RouteSwitch(){
   const cartProducts = cartArr.map(prod=>{
     return(
         <li key={uniqid()}>
+
             <p>{prod.name}</p>
             <p>{"$"+prod.price}</p>
+        
             <div className="quantity">
                 <button onClick={()=>{plusOne(prod)}}>+</button>
                 <p>{prod.quantity}</p>
                 <button onClick={()=>{minusOne(prod)}} >-</button>
             </div>
+
+            <button onClick={()=>{deleteItem(prod)}}>DELETE</button>
+
         </li>
     )
 })

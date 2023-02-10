@@ -1,16 +1,46 @@
 body{
+  margin: 0px;
   min-height: 100vh;
 }
 
 .App{
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 90vh;
+  font-size: calc(10px + 2vmin);
+
+  background-image: url("./assets/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.jpg");
+  
+  background-size: cover;
+  
+  padding: 0px 50px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.App .heading h3{
+  margin: 0px;
+  font-weight: 400;
+}
+
+.App .content{
+  padding: 0px 700px 0px 0px;
+}
+
+.App .content p{
+  font-weight: 300;
+}
+
+.App .CTA button{
+  
+  background-color: pink;
+  
+  font-size: 23px;
+  border-radius: 110px;
+  padding: 6px 34px;
+  border: 3px solid deeppink;
+
 }
 
 .Shop{
@@ -21,10 +51,29 @@ body{
 }
 
 .Products{
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Products li{
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px grey;
+  border-radius: 10px;
+}
+
+.productUl li img{
+  height: 300px;
+  width: auto;
+}
+
+.productUl li button{
+  background: pink;
+  border-radius: 100px;
+  border: 2px solid deeppink;
+  padding: 3px 6px;
 }
 
 .Nav{
@@ -33,8 +82,12 @@ body{
   align-items: center;
   min-height: 10vh;
   color: white;
-  background-color: black;
+  background-color: #ff647e;
   padding: 0px 50px;
+}
+
+.Nav h1{
+  color: white;
 }
 
 ul{
@@ -46,7 +99,7 @@ ul{
 
 .productUl{
   margin:0px;
-  padding:0px ;
+  padding:50px 100px ;
   display: grid;
   grid-template-columns: 1fr 1fr ;
   gap: 50px;
@@ -56,6 +109,9 @@ ul{
 li{
   color: white;
   text-align: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0px 10px;
 }
 
 .shopUl{
@@ -76,3 +132,6 @@ li{
   margin: 0px;
 }
 
+a{
+  text-decoration: none;
+}
