@@ -1,0 +1,78 @@
+body{
+  min-height: 100vh;
+}
+
+.App{
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Shop{
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Products{
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Nav{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  min-height: 10vh;
+  color: white;
+  background-color: black;
+  padding: 0px 50px;
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  list-style-type: none;
+}
+
+.productUl{
+  margin:0px;
+  padding:0px ;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 50px;
+  list-style-type: none ;
+}
+
+li{
+  color: white;
+  text-align: center;
+}
+
+.shopUl{
+  margin:0px;
+  padding:0px ;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 50px;
+  list-style-type: none ;
+}
+
+.quantity{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quantity p{
+  margin: 0px;
+}
+
