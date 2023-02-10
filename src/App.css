@@ -193,8 +193,8 @@ li:hover{
 }
 
 .shopUl li img{
-  height: 100px;
-  width: auto;
+  height: auto;
+  width: 100px;
 }
 
 .quantity{
