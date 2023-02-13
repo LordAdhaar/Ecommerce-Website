@@ -30,21 +30,6 @@ export default function Nav(){
 
     return(
         <nav className="Nav">
-            {!user && (
-                <button onClick={GoogleLogin}> <FcGoogle/>Sign In</button>
-            )}
-            {user && (
-                <Link to="/">
-                    <div>
-                        <h2>{user.displayName}</h2>
-                        <h4>{user.email}</h4>
-                        <img src={user.photoURL} alt="photo" />
-                        <Link to="/">
-                            <button onClick={()=> auth.signOut()}>Sign Out</button>
-                        </Link>
-                    </div>
-                </Link>
-            )}
             <Link to="/">
                 <h1>AnimeShop</h1>
             </Link>
@@ -66,6 +51,23 @@ export default function Nav(){
                     </li>
                 </Link>
             </ul>
+            {!user && (
+                <button onClick={GoogleLogin} className="signIn"> <FcGoogle/><p>Sign In</p></button>
+            )}
+            {user && (
+                <Link to="/">
+                    <div className="user">
+                        <img src={user.photoURL} alt="photo" />
+                        <div className="signOut">
+                            <p>{user.displayName}</p>
+                            <Link to="/">
+                                <button onClick={()=> auth.signOut()}>Sign Out</button>
+                            </Link>
+                        </div>
+                        
+                    </div>
+                </Link>
+            )}
         </nav>
     )
 }

@@ -9,7 +9,7 @@ import Dashboard from "./Dashboard";
 import uniqid from "uniqid";
 
 import {db} from "./firebase";
-import {query,collection, onSnapshot, QuerySnapshot} from "firebase/firestore";
+import {query,collection, onSnapshot, QuerySnapshot, updateDoc,doc} from "firebase/firestore";
 
 export default function RouteSwitch(){
 
@@ -83,9 +83,9 @@ export default function RouteSwitch(){
             </div>
         
             <div className="quantity">
-                <button onClick={()=>{plusOne(prod)}}>+</button>
+                <button onClick={()=>{plusOne(prod);}}>+</button>
                 <p>{prod.quantity}</p>
-                <button onClick={()=>{minusOne(prod)}} >-</button>
+                <button onClick={()=>{minusOne(prod);}} >-</button>
             </div>
 
 
@@ -95,8 +95,8 @@ export default function RouteSwitch(){
 
   //create shopping cart
   //read shopping cart
-/*
-  useEffect(()=>{
+
+  /*useEffect(()=>{
     const q = query(collection(db,"ShoppingCart"));
     const unsubscribe = onSnapshot(q,(QuerySnapshot)=>{
       let ShoppingCartArr = [];
@@ -107,9 +107,23 @@ export default function RouteSwitch(){
     console.log(ShoppingCartArr,cartArr);
     });
     return ()=>unsubscribe();
-  },[])*/
+  },[])
   
   //update shopping cart
+  
+  const incQnt = async (item) => {
+    await updateDoc(doc(db,"ShoppingCart",item.id),{
+      quantity : item.quantity+1-1
+    })
+  }
+
+  const decQnt = async (item) => {
+    await updateDoc(doc(db,"ShoppingCart",item.id),{
+      quantity : item.quantity+1-1
+    })
+  }*/
+
+
   // delete todo
 
 
