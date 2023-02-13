@@ -4,7 +4,12 @@ import App from "./App";
 import Shop from "./Shop";
 import Nav from "./Nav"
 import Products from "./Products"
+import Login from "./Login";
+import Dashboard from "./Dashboard";
 import uniqid from "uniqid";
+
+import {db} from "./firebase";
+import {query,collection, onSnapshot, QuerySnapshot} from "firebase/firestore";
 
 export default function RouteSwitch(){
 
@@ -13,6 +18,7 @@ export default function RouteSwitch(){
   const [bill,setBill] = useState(0);
 
   
+
   function addToCart(product){
 
     for (let cartItem of cartArr){
@@ -87,6 +93,26 @@ export default function RouteSwitch(){
     )
 })
 
+  //create shopping cart
+  //read shopping cart
+/*
+  useEffect(()=>{
+    const q = query(collection(db,"ShoppingCart"));
+    const unsubscribe = onSnapshot(q,(QuerySnapshot)=>{
+      let ShoppingCartArr = [];
+      QuerySnapshot.forEach((doc)=>{
+        ShoppingCartArr.push({...doc.data(),id:doc.id})
+      })
+    setCartArr(ShoppingCartArr);
+    console.log(ShoppingCartArr,cartArr);
+    });
+    return ()=>unsubscribe();
+  },[])*/
+  
+  //update shopping cart
+  // delete todo
+
+
   return (
     <HashRouter>
       <Nav/>
@@ -94,6 +120,7 @@ export default function RouteSwitch(){
         <Route path="/" element={<App />} />
         <Route path="/Products" element={<Products allProducts={allProducts}/>} />
         <Route path="/Shop" element={<Shop cartProducts={cartProducts} bill={bill}/>} />
+        <Route path="/Dashboard" element={<Dashboard/>}/>
       </Routes>
     </HashRouter>
   );
