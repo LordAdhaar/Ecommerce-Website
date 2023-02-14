@@ -9,20 +9,31 @@ import Dashboard from "./Dashboard";
 import uniqid from "uniqid";
 
 import {db} from "./firebase";
-import {query,collection, onSnapshot, QuerySnapshot, updateDoc,doc} from "firebase/firestore";
+import {query,collection, onSnapshot, QuerySnapshot, updateDoc,doc, addDoc, deleteDoc} from "firebase/firestore";
 
 export default function RouteSwitch(){
 
-  const [productArr, setProductArr] = useState([{name:"Rem Boy Pillow", price:200,id:"zero",imageUrl:"./assets/remBodyPillow.avif"},{name:"Rem Cosplay",price:2,id:"one",imageUrl:"./assets/remCosplay.jpg"},{name:"Waifu MousePad",price:200,id:"two",imageUrl:"./assets/waifuMousePad.jpeg"},{name:"DevilWaifu Sticket",price:20,id:"three",imageUrl:"./assets/devilWaifu.webp"},{name:"Send Noods Poster",price:2000,id:"four",imageUrl:"./assets/sendNoods.jpg"},{name:"Waifu T-Shirt",price:150,id:"five",imageUrl:"./assets/waifuTshirt.jpg"}]);
+  const [productArr, setProductArr] = useState([{name:"Rem Boy Pillow", price:200,uniqueId:"zero",imageUrl:"./assets/remBodyPillow.avif"},{name:"Rem Cosplay",price:2,uniqueId:"one",imageUrl:"./assets/remCosplay.jpg"},{name:"Waifu MousePad",price:200,uniqueId:"two",imageUrl:"./assets/waifuMousePad.jpeg"},{name:"DevilWaifu Sticket",price:20,uniqueId:"three",imageUrl:"./assets/devilWaifu.webp"},{name:"Send Noods Poster",price:2000,uniqueId:"four",imageUrl:"./assets/sendNoods.jpg"},{name:"Waifu T-Shirt",price:150,uniqueId:"five",imageUrl:"./assets/waifuTshirt.jpg"}]);
   const [cartArr, setCartArr] = useState([])
   const [bill,setBill] = useState(0);
 
+  /*function initializeBill(){
+    let iniBill=0;
+    for(let item of cartArr){
+      iniBill+=item.price*item.quantity;
+    }
+    console.log(iniBill)
+    console.log(cartArr)
+
+    return iniBill;
+  }*/
   
 
   function addToCart(product){
 
     for (let cartItem of cartArr){
-      if (cartItem.id === product.id){
+      console.log(cartItem.uniqueId, product.uniqueId)
+      if (cartItem.uniqueId === product.uniqueId){
         return;
       }
     }
@@ -47,25 +58,26 @@ export default function RouteSwitch(){
   function minusOne(product){
     product.quantity-=1;
     if(product.quantity===0){
-      setCartArr(cartArr.filter(item => item.id !== product.id))
+      console.log(product.uniqueId)
+      setCartArr(cartArr.filter(item => item.uniqueId !== product.uniqueId));
     }
     setBill(bill-product.price)
   }
 
   function deleteItem(product){
     
-    setCartArr(cartArr.filter(item => item.id!==product.id));
+    setCartArr(cartArr.filter(item => item.uniqueId!==product.uniqueId));
     setBill(bill - product.price*product.quantity)
     
   }
 
   const allProducts = productArr.map(prod=>{
     return(
-        <li key={uniqid()} id ={prod.id}>
+        <li key={uniqid()} id ={prod.uniqueId}>
             <img src={require(`${prod.imageUrl}`)} alt="waifu" />
             <p>{prod.name}</p>
             <p>{"$"+prod.price}</p>
-            <button onClick={()=>{addToCart(prod)}}>ADD TO CART</button>
+            <button  onClick={()=>{addToCart(prod);createShoppingCart(prod)}}>ADD TO CART</button>
         </li>
     )
   })
@@ -79,13 +91,13 @@ export default function RouteSwitch(){
             <div className="description">
               <p>{prod.name}</p>
               <p>{"$" + prod.price}</p>
-              <button onClick={()=>{deleteItem(prod)}}>DELETE</button>
+              <button onClick={()=>{deleteItem(prod);deleteShoppingItem(prod.id)}}>DELETE</button>
             </div>
         
             <div className="quantity">
-                <button onClick={()=>{plusOne(prod);}}>+</button>
+                <button onClick={()=>{plusOne(prod);incQnt(prod)}}>+</button>
                 <p>{prod.quantity}</p>
-                <button onClick={()=>{minusOne(prod);}} >-</button>
+                <button onClick={()=>{minusOne(prod);decQnt(prod)}} >-</button>
             </div>
 
 
@@ -94,9 +106,27 @@ export default function RouteSwitch(){
 })
 
   //create shopping cart
+  const createShoppingCart = async(prod) => {
+    
+    for (let cartItem of cartArr){
+      console.log(cartItem.uniqueId, prod.uniqueId)
+      if (cartItem.uniqueId === prod.uniqueId){
+        return;
+      }
+    };
+
+    await addDoc(collection(db,"ShoppingCart"),{
+      uniqueId:prod.uniqueId,
+      imageUrl:prod.imageUrl,
+      name:prod.name,
+      price:prod.price,
+      quantity:1 
+    })
+  } 
+
   //read shopping cart
 
-  /*useEffect(()=>{
+  useEffect(()=>{
     const q = query(collection(db,"ShoppingCart"));
     const unsubscribe = onSnapshot(q,(QuerySnapshot)=>{
       let ShoppingCartArr = [];
@@ -104,27 +134,41 @@ export default function RouteSwitch(){
         ShoppingCartArr.push({...doc.data(),id:doc.id})
       })
     setCartArr(ShoppingCartArr);
-    console.log(ShoppingCartArr,cartArr);
+    
+    let temp = 0;
+    for(let item of ShoppingCartArr){
+      temp+= item.price*item.quantity;
+    }
+
+    console.log(ShoppingCartArr,cartArr,temp);
+    setBill(temp);
     });
+    console.log(cartArr)
     return ()=>unsubscribe();
   },[])
   
   //update shopping cart
-  
   const incQnt = async (item) => {
     await updateDoc(doc(db,"ShoppingCart",item.id),{
-      quantity : item.quantity+1-1
+      quantity : item.quantity
     })
   }
 
   const decQnt = async (item) => {
+
+    if(item.quantity===0){
+      deleteShoppingItem(item.id)
+      return;
+    }
     await updateDoc(doc(db,"ShoppingCart",item.id),{
-      quantity : item.quantity+1-1
+      quantity : item.quantity
     })
-  }*/
+  }
 
-
-  // delete todo
+  // delete shoppingCart
+  const deleteShoppingItem = async(id)=>{
+    await deleteDoc(doc(db,"ShoppingCart",id))
+  }
 
 
   return (
@@ -132,7 +176,7 @@ export default function RouteSwitch(){
       <Nav/>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Products" element={<Products allProducts={allProducts}/>} />
+        <Route path="/Products" element={<Products allProducts={allProducts} />} />
         <Route path="/Shop" element={<Shop cartProducts={cartProducts} bill={bill}/>} />
         <Route path="/Dashboard" element={<Dashboard/>}/>
       </Routes>

@@ -1,7 +1,6 @@
 import uniqid from "uniqid";
 
 export default function Shop(props){
-
     return(
         <div className="Shop">
 
