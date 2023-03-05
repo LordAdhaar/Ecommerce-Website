@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.c4173526.css",
-    "main.js": "/shopping-cart/static/js/main.075f9361.js",
+    "main.css": "/shopping-cart/static/css/main.493bbd19.css",
+    "main.js": "/shopping-cart/static/js/main.003cb712.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/waifubg.jpg_large": "/shopping-cart/static/media/waifubg.ff3be1a0087501642786.jpg_large",
+    "static/media/waifuBW.jpg": "/shopping-cart/static/media/waifuBW.e5d3e0efe6b4ace64671.jpg",
     "static/media/eyes.jpeg": "/shopping-cart/static/media/eyes.9bdcf6b8bbfb45108834.jpeg",
     "static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.jpg": "/shopping-cart/static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.ef4df2640b82a67edd4e.jpg",
+    "static/media/waifuPhone.jpg": "/shopping-cart/static/media/waifuPhone.ca6f032ed762ebc22bb9.jpg",
     "static/media/newRem.jpg": "/shopping-cart/static/media/newRem.09480cf623bec5b1924e.jpg",
     "static/media/waifuMousePad.jpeg": "/shopping-cart/static/media/waifuMousePad.b82a8a586071b9b9afa1.jpeg",
     "static/media/waifuTshirt.jpg": "/shopping-cart/static/media/waifuTshirt.dc41eaede282f5ffdc2d.jpg",
@@ -16,12 +19,12 @@
     "static/media/buzuu.jpg": "/shopping-cart/static/media/buzuu.d4c0b0606ec2815db9af.jpg",
     "static/media/logo.svg": "/shopping-cart/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/shopping-cart/index.html",
-    "main.c4173526.css.map": "/shopping-cart/static/css/main.c4173526.css.map",
-    "main.075f9361.js.map": "/shopping-cart/static/js/main.075f9361.js.map",
+    "main.493bbd19.css.map": "/shopping-cart/static/css/main.493bbd19.css.map",
+    "main.003cb712.js.map": "/shopping-cart/static/js/main.003cb712.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4173526.css",
-    "static/js/main.075f9361.js"
+    "static/css/main.493bbd19.css",
+    "static/js/main.003cb712.js"
   ]
 }
