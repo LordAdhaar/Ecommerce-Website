@@ -52,7 +52,9 @@ export default function Nav(){
                 </Link>
             </ul>
             {!user && (
-                <button onClick={GoogleLogin} className="signIn"> <FcGoogle/><p>Sign In</p></button>
+                <div className="signInButton">
+                    <button onClick={GoogleLogin} className="signIn"> <FcGoogle/><p>Sign In</p></button>
+                </div>
             )}
             {user && (
                 <Link to="/">

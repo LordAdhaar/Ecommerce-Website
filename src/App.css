@@ -352,11 +352,16 @@ a{
     background-color: #9c0000;
     justify-content: flex-end;
     height: 100%;
+    align-items: center;
   }
-  
+
+  .Nav button.signIn{
+    background-color: white;
+    margin-right: 10px;
+  }  
 
   .user{
-    transform: scale(0.7);
+    transform: scale(0.8);
   }
 
   .user img{
@@ -371,10 +376,14 @@ a{
 
 @media (max-width: 500px){
 
-  .Shop{
+  .shopUl li, .subTotal, .total, .shipping{
+    width: 300px;
+  }
+
+  /*.Shop{
     transform: scaleX(0.8) scaleY(0.8) translateY(-100px);
 
-  }
+  }*/
 
   /*.finalBill, .shopUl{
     transform: scaleX(0.8) scaleY(0.8) translateY(-85px);
