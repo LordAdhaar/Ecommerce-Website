@@ -9,17 +9,16 @@ body{
   font-size: calc(10px + 2vmin);
 
   /*background-image: url("./assets/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.jpg");*/
-  background-image: url("./assets/newRem.jpg");
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+  background-image: url("./assets/waifubg.jpg_large");
+  background-size: cover;
+  background-position: center;
   
   padding: 0px 50px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .App .heading h3{
@@ -93,8 +92,12 @@ body{
   align-items: center;
   min-height: 10vh;
   color: white;
-  background-color: #ff647e;
+  background-color: #9c0000;
+
   padding: 0px 50px;
+
+  box-shadow: 0px 0px 15px 0px #4c4c4c;
+  position: relative;
 }
 
 .Nav h1{
@@ -313,24 +316,34 @@ a{
   font-weight: 500;
 }
 
+.AppContent{
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border-radius: 23px;
+  border: 5px solid #ff647e;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0px 0px 20px 0px #4c4c4c;
+}
+
 @media (max-width: 1200px) {
   .App {
-    background-image: none;
     align-items: center;
-  }
+ 
+  }  
 
-  
 }
 
 @media (max-width: 800px) {
-
-  .App{
-  }
-
   .Nav{
     padding: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: #ff647e;
   }
 
   .Nav > :first-child{
@@ -378,6 +391,14 @@ a{
 
   .shopUl li, .subTotal, .total, .shipping{
     width: 300px;
+  }
+
+  .AppContent{
+    box-shadow: 0px 0px 10px 0px #4c4c4c;
+  }
+
+  .App .CTA button{
+    font-size: 17px;
   }
 
   /*.Shop{
