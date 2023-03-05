@@ -4,6 +4,10 @@ export default function Shop(props){
     return(
         <div className="Shop">
 
+            <ul className="shopUl">
+                {props.cartProducts}
+            </ul>
+
             <div className="finalBill">
                 <div className="subTotal">
                     <h3>Sub-Total</h3>
@@ -19,9 +23,7 @@ export default function Shop(props){
                 </div>
                 <button>ORDER</button>
             </div>
-            <ul className="shopUl">
-                {props.cartProducts}
-            </ul>
+            
         </div>
     )
 }
