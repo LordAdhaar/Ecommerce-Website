@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.9fdcd2b7.css",
-    "main.js": "/shopping-cart/static/js/main.7fde0f8d.js",
+    "main.css": "/shopping-cart/static/css/main.c4173526.css",
+    "main.js": "/shopping-cart/static/js/main.075f9361.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/eyes.jpeg": "/shopping-cart/static/media/eyes.9bdcf6b8bbfb45108834.jpeg",
     "static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.jpg": "/shopping-cart/static/media/4528659-cat-girl-cleavage-short-hair-rem-re-zero-rezero-kara-hajimeru-isekai-seikatsu-nekomimi-aqua-eyes-aqua-hair-blushing-headdress-maid-simple-background.ef4df2640b82a67edd4e.jpg",
@@ -16,12 +16,12 @@
     "static/media/buzuu.jpg": "/shopping-cart/static/media/buzuu.d4c0b0606ec2815db9af.jpg",
     "static/media/logo.svg": "/shopping-cart/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/shopping-cart/index.html",
-    "main.9fdcd2b7.css.map": "/shopping-cart/static/css/main.9fdcd2b7.css.map",
-    "main.7fde0f8d.js.map": "/shopping-cart/static/js/main.7fde0f8d.js.map",
+    "main.c4173526.css.map": "/shopping-cart/static/css/main.c4173526.css.map",
+    "main.075f9361.js.map": "/shopping-cart/static/js/main.075f9361.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fdcd2b7.css",
-    "static/js/main.7fde0f8d.js"
+    "static/css/main.c4173526.css",
+    "static/js/main.075f9361.js"
   ]
 }
