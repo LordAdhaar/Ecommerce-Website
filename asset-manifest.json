@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.493bbd19.css",
-    "main.js": "/shopping-cart/static/js/main.003cb712.js",
+    "main.css": "/shopping-cart/static/css/main.ba2733ed.css",
+    "main.js": "/shopping-cart/static/js/main.09ac5411.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/animeHero.webp": "/shopping-cart/static/media/animeHero.9c9235eab5b348f6a3b9.webp",
+    "static/media/waifuBlurFinal.jpg": "/shopping-cart/static/media/waifuBlurFinal.58eb1daa3b1fc568a644.jpg",
     "static/media/waifubg.jpg_large": "/shopping-cart/static/media/waifubg.ff3be1a0087501642786.jpg_large",
     "static/media/waifuBW.jpg": "/shopping-cart/static/media/waifuBW.e5d3e0efe6b4ace64671.jpg",
     "static/media/eyes.jpeg": "/shopping-cart/static/media/eyes.9bdcf6b8bbfb45108834.jpeg",
@@ -10,21 +12,27 @@
     "static/media/waifuPhone.jpg": "/shopping-cart/static/media/waifuPhone.ca6f032ed762ebc22bb9.jpg",
     "static/media/newRem.jpg": "/shopping-cart/static/media/newRem.09480cf623bec5b1924e.jpg",
     "static/media/waifuMousePad.jpeg": "/shopping-cart/static/media/waifuMousePad.b82a8a586071b9b9afa1.jpeg",
+    "static/media/sticker.jpg": "/shopping-cart/static/media/sticker.b1ba806e1bb378a0e98b.jpg",
     "static/media/waifuTshirt.jpg": "/shopping-cart/static/media/waifuTshirt.dc41eaede282f5ffdc2d.jpg",
     "static/media/devilWaifu.webp": "/shopping-cart/static/media/devilWaifu.1eadcaa1b51481594ffa.webp",
     "static/media/remCosplay.jpg": "/shopping-cart/static/media/remCosplay.1c483d5ca66edfcdaf40.jpg",
     "static/media/sendNoods.jpg": "/shopping-cart/static/media/sendNoods.50001610f3c0eb761a6e.jpg",
     "static/media/remBodyPillow.avif": "/shopping-cart/static/media/remBodyPillow.9a0a1b06de6c75a29821.avif",
     "static/media/eyesRem.jpg": "/shopping-cart/static/media/eyesRem.efd1d9d4b5079a786307.jpg",
+    "static/media/naruto.jpg": "/shopping-cart/static/media/naruto.b9bf767e2472366821a3.jpg",
+    "static/media/goku.jpg": "/shopping-cart/static/media/goku.5aeeefa31b537fe6aac3.jpg",
+    "static/media/AOT.jpg": "/shopping-cart/static/media/AOT.8251be705031f5d43196.jpg",
     "static/media/buzuu.jpg": "/shopping-cart/static/media/buzuu.d4c0b0606ec2815db9af.jpg",
+    "static/media/gojo.jpg": "/shopping-cart/static/media/gojo.54f2b2883b894b000e65.jpg",
+    "static/media/AnimeHat.jpg": "/shopping-cart/static/media/AnimeHat.ffd4efbb13343bb68d17.jpg",
     "static/media/logo.svg": "/shopping-cart/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/shopping-cart/index.html",
-    "main.493bbd19.css.map": "/shopping-cart/static/css/main.493bbd19.css.map",
-    "main.003cb712.js.map": "/shopping-cart/static/js/main.003cb712.js.map",
+    "main.ba2733ed.css.map": "/shopping-cart/static/css/main.ba2733ed.css.map",
+    "main.09ac5411.js.map": "/shopping-cart/static/js/main.09ac5411.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.493bbd19.css",
-    "static/js/main.003cb712.js"
+    "static/css/main.ba2733ed.css",
+    "static/js/main.09ac5411.js"
   ]
 }
