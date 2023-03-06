@@ -13,7 +13,7 @@ import {query,collection, onSnapshot, QuerySnapshot, updateDoc,doc, addDoc, dele
 
 export default function RouteSwitch(){
 
-  const [productArr, setProductArr] = useState([{name:"Rem Boy Pillow", price:200,uniqueId:"zero",imageUrl:"./assets/remBodyPillow.avif"},{name:"Rem Cosplay",price:2,uniqueId:"one",imageUrl:"./assets/remCosplay.jpg"},{name:"Waifu MousePad",price:200,uniqueId:"two",imageUrl:"./assets/waifuMousePad.jpeg"},{name:"DevilWaifu Sticket",price:20,uniqueId:"three",imageUrl:"./assets/devilWaifu.webp"},{name:"Send Noods Poster",price:2000,uniqueId:"four",imageUrl:"./assets/sendNoods.jpg"},{name:"Waifu T-Shirt",price:150,uniqueId:"five",imageUrl:"./assets/waifuTshirt.jpg"}]);
+  const [productArr, setProductArr] = useState([{name:"Goku Action Figure", price:200,uniqueId:"zero",imageUrl:"./assets/goku.jpg"},{name:"AOT Necklace",price:2,uniqueId:"one",imageUrl:"./assets/AOT.jpg"},{name:"Gojo Water Bottle",price:200,uniqueId:"two",imageUrl:"./assets/gojo.jpg"},{name:"Anime Sticker",price:20,uniqueId:"three",imageUrl:"./assets/sticker.jpg"},{name:"Anime Hat",price:2000,uniqueId:"four",imageUrl:"./assets/AnimeHat.jpg"},{name:"Waifu T-Shirt",price:150,uniqueId:"five",imageUrl:"./assets/waifuTshirt.jpg"}]);
   const [cartArr, setCartArr] = useState([])
   const [bill,setBill] = useState(0);
 

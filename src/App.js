@@ -6,14 +6,14 @@ export default function App(props) {
     <div className="App">
       <div className="AppContent">
         <div className="heading">
-          <h3>Your waifu is waiting for you !</h3>
+          <h3>Get your anime fix with our merch !</h3>
         </div>
         <div className="content">
-          <p>uWu! Senpai, you are finally here. Buy my body pillows and skirt Senpai! Show me how much you care about me. I have been waiting for you for a long long time.</p>
+          <p>Are you a fan of anime and looking for the perfect way to express your love for your favourite characters ? Look no further than our Anime Merchandise Store !</p>
         </div>
         <div className="CTA">
           <Link to="/Products">
-            <button>Buy my skirt &nbsp; ≧◡≦</button>
+            <button>Shop Now &nbsp; ≧◡≦</button>
           </Link>
         </div>
       </div>
@@ -21,4 +21,3 @@ export default function App(props) {
     </div>
   );
 }
-
